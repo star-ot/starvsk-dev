@@ -1,7 +1,11 @@
-"use client";
 import React, { useState, useEffect } from "react";
 
-const CenteredText = ({ texts, duration }) => {
+interface CenteredTextProps {
+  texts: string[];
+  duration: number;
+}
+
+const CenteredText: React.FC<CenteredTextProps> = ({ texts, duration }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -14,7 +18,7 @@ const CenteredText = ({ texts, duration }) => {
 
   return (
     <div className="flex items-center justify-center">
-      <h1 className="animate-pulse text-xs text-zinc-200">{texts[currentIndex]}</h1>
+      <h1 className="animate-pulse text-xs text-00">{texts[currentIndex]}</h1>
     </div>
   );
 };
