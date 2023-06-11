@@ -1,3 +1,6 @@
+This is a portfolio website for my Roblox and gaming related development work. It is built with Next.js and Tailwind CSS.
+A lot of the code is pretty rough, but I'm working on cleaning it up.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
