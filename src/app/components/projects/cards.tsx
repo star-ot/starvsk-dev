@@ -19,7 +19,7 @@ export default function ProjectCards() {
                 </div>
                 <div className="px-10 py-20 text-center transition duration-300 transform bg-gray-900 rounded shadow-2xl hover:scale-105 md:shadow-xl hover:shadow-2xl">
                     <p className="font-semibold text-gray-200">
-                        Some don't, become nothing again
+                        Some do not, become nothing again
                     </p>
                 </div>
                 <div className="px-10 py-20 text-center transition duration-300 transform bg-gray-900 rounded shadow-2xl hover:scale-105 md:shadow-xl hover:shadow-2xl">
