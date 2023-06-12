@@ -68,7 +68,7 @@ export default function Projects() {
 				</h1>
 
 				<div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
-				<div className="my-16 text-center animate-fade-in">
+				<div className="w-2/4 my-16 text-center animate-fade-in">
 					<h2 className="text-sm text-zinc-300 ">
 						Project details coming soon. Contact me for more information.
 					</h2>
