@@ -14,7 +14,7 @@ const texts = [
 
 export default function FooterText() {
     return (
-        <div className="absolute bottom-0 w-screen py-4">
+        <div className="text-zinc-300 absolute bottom-0 w-screen py-4">
             <CenteredText texts={texts} duration={2000} />
         </div>
     );
