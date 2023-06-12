@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import Particles from "../components/particles";
 import { motion } from "framer-motion";
-import ProjectCards from "../components/projects/cards";
+import ProjectList from "../components/projects/project-list";
 import FooterText from "../components/common/footer";
 
 const navigation = [
@@ -63,16 +63,17 @@ export default function Projects() {
 					className="absolute inset-0 -z-10 animate-fade-in"
 					quantity={100}
 				/>
-				<h1 className="z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
+				<h1 className="pb-10 z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
 					Projects
 				</h1>
 
 				<div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
-				<div className="w-2/4 my-16 text-center animate-fade-in">
-					<h2 className="text-sm text-zinc-300 ">
-						Project details coming soon. Contact me for more information.
+				<div className="w-2/4 text-center animate-fade-in">
+					<h2 className="pt-4 text-sm text-zinc-300 ">
+						Language Filter:
 					</h2>
 				</div>
+				<ProjectList />
 				<FooterText />
 			</div>
 			
