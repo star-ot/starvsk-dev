@@ -54,7 +54,7 @@ export default function Custom404() {
                                     whileTap={{ scale: 0.9 }}
                                     animate="exit"
                                 >
-                                    {item.name}
+                                    <a>{item.name}</a>
                                 </motion.a>
                             </Link>
                         ))}
@@ -81,7 +81,7 @@ export default function Custom404() {
                             whileTap={{ scale: 0.9 }}
                             animate="exit"
                         >
-                            Go back home
+                            <a>Go back home</a>
                         </motion.a>
                     </Link>
                 </div>
