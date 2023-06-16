@@ -70,7 +70,7 @@ export default function Intro() {
                 ) : (
                     <>
                         <span className="text-red-400 hover:animate-pulse">Passionate</span>{" "}
-                        &amp; forward-thinking software engineer and operations leader with a
+                        & forward-thinking software engineer and operations leader with a
                         strong technical foundation, complemented by{" "}
                         <span className="text-red-400 hover:animate-pulse">3+ years</span>{" "}
                         of experience in{" "}
