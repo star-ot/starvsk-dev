@@ -54,18 +54,31 @@ const projects: Project[] = [
         tags: ["Roblox", "Multiplayer", "Closed-Source"],
         language: "Lua", slug: "snazzy-cafe"
     },
-    { id: 4, name: "Starvsk.dev", 
-    tags: ["Website", "Open-Source"],
-    language: "TypeScript", slug: "starvsk-dev" },
-    { id: 6, name: "ITAD Odoo Modules", 
-    tags: ["Odoo", "Closed-Source"],
-    language: "Python", slug: "itad-odoo-modules" },
-    { id: 2, name: "MedusaJS Integrations", 
-    tags: ["Medusa.js", "Closed-Source"],
-    language: "TypeScript", slug: "medusajs-integrations" },
-    { id: 3, name: "OpenAI Support Bot", 
-    tags: ["Closed-Source"],
-    language: "Python", slug: "openai-support-bot" },
+    {
+        id: 10, name: "EpoxyWorx.co",
+        tags: ["Website", "Closed-Source"],
+        language: "TypeScript", slug: "epoxyworx-co"
+    },
+    {
+        id: 4, name: "Starvsk.dev",
+        tags: ["Website", "Open-Source"],
+        language: "TypeScript", slug: "starvsk-dev"
+    },
+    {
+        id: 6, name: "ITAD Odoo Modules",
+        tags: ["Odoo", "Closed-Source"],
+        language: "Python", slug: "itad-odoo-modules"
+    },
+    {
+        id: 2, name: "MedusaJS Integrations",
+        tags: ["Medusa.js", "Closed-Source"],
+        language: "TypeScript", slug: "medusajs-integrations"
+    },
+    {
+        id: 3, name: "OpenAI Support Bot",
+        tags: ["Closed-Source"],
+        language: "Python", slug: "openai-support-bot"
+    },
 ];
 
 const ProjectList = () => {
@@ -155,40 +168,39 @@ const ProjectList = () => {
                 {filteredProjects.map((project) => (
                     <div
                         key={project.id}
-                        data-tooltip-id={`tooltip-${project.id}`}
-                        data-tooltip-content={project.description || ""}
-                        data-tooltip-place="top"
-                        className="cursor-pointer hover:bg-gray-500 bg-gray-700 p-4 rounded-md shadow-md"
+                        className="bg-gray-800 text-zinc-100 p-4 rounded-md shadow-md"
                     >
                         <Link key={project.id} href={`/projects/${project.slug}`}>
-                            <h3 className="text-lg text-zinc-100 font-bold">{project.name}</h3>
-                            <p className="text-zinc-300">{project.language}</p>
+                            <h3 className="text-lg font-bold">{project.name}</h3>
                         </Link>
-                        {["Find the Candy", "Find the Bottlecaps", "Be a Robot!", "blow people up with codes on their head at 3 am"].includes(
-                            project.name
-                        ) && <p className="text-zinc-100">Total Plays: {projectVisits[project.id]}</p>}
+                        <p className="text-sm text-zinc-300">{project.language}</p>
+                        {project.description && (
+                            <p className="text-zinc-300 mt-2">{project.description}</p>
+                        )}
+                        {project.tags && (
+                            <div className="flex flex-wrap mt-2">
+                                {project.tags.map((tag) => (
+                                    <p
+                                        key={tag}
+                                        className="text-zinc-300 bg-gray-700 rounded px-2 text-xs py-1 mr-2 mb-2"
+                                    >
+                                        {tag}
+                                    </p>
+                                ))}
+                            </div>
+                        )}
+                        {projectVisits[project.id] && (
+                            <p className="text-zinc-100 mt-2">Total Plays: {projectVisits[project.id]}</p>
+                        )}
                         {project.gamelink && (
-                            <Link href={project.gamelink} target="_blank">
-                                <div className="w-1/5 md:w-1/4 mt-2">
-                                    <p className="text-xs md:text-sm text-zinc-100 bg-green-600 py-2 pl-2 md:pl-8 rounded-md">
+                            <div className="flex justify-end mt-2">
+                                <Link href={project.gamelink} target="_blank">
+                                    <p className="text-xs md:text-sm text-zinc-100 bg-green-600 py-2 px-4 rounded-md cursor-pointer">
                                         Play
                                     </p>
-                                </div>
-                            </Link>
+                                </Link>
+                            </div>
                         )}
-                        {/* New Features */}
-                        <div className="flex justify-between mt-2">
-                            {/* 3. Project Tags */}
-                            {project.tags && (
-                                <div className="flex space-x-2">
-                                    {project.tags.map((tag) => (
-                                        <p key={tag} className="text-zinc-300 bg-gray-800 rounded px-2 text-xs py-1">
-                                            {tag}
-                                        </p>
-                                    ))}
-                                </div>
-                            )}
-                        </div>
                     </div>
                 ))}
             </div>

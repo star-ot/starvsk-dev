@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import FooterText from "../src/app/components/common/footer";
 import Particles from "../src/app/components/particles";
