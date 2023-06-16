@@ -56,6 +56,7 @@ export default function Home() {
             exit="exit"
             variants={pageVariants}
         >
+            <Particles className="absolute inset-0 -z-10 animate-fade-in" quantity={100} />
             <nav className="my-4 sm:my-8 animate-fade-in">
                 <ul className="flex items-center justify-center gap-4">
                     {navigation.map((item) => (
@@ -73,7 +74,7 @@ export default function Home() {
                 </ul>
             </nav>
             <div className="w-screen h-px animate-glow animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
-            <Particles className="absolute inset-0 -z-10 animate-fade-in" quantity={100} />
+            
             <motion.h1
                 className="font-Inter hover:text-black hover:border-1 z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text"
                 whileHover={{ scale: 1.1 }}

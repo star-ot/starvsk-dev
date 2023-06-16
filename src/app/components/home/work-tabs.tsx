@@ -92,7 +92,7 @@ export default function ExperienceTabs() {
     return (
         <div className="flex flex-col items-center justify-center w-full h-full pb-16">
             <div className="flex flex-col pt-8">
-                <span className="text-4xl text-white">Professional Experience</span>
+                <span className="text-lg md:text-2xl text-white">Professional Experience</span>
                 <br />
                 <br />
                 <div className="flex items-center space-x-1 md:space-x-4 flex-wrap justify-center">

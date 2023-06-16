@@ -59,7 +59,7 @@ export default function Intro() {
                         <span className="text-indigo-400 hover:animate-pulse">
                             agile methodologies
                         </span>
-                        .{" "}
+                        .{" "}<br/>
                         <button
                             className="text-blue-500 font-medium underline hover:text-blue-600"
                             onClick={handleShowLessClick}
