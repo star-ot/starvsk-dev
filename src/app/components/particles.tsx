@@ -144,7 +144,7 @@ export default function Particles({
         return remapped > 0 ? remapped : 0;
     };
 
-    const handleMouseMove = (event: MouseEvent) => {
+    const handleMouseMove = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         if (canvasRef.current && canvasContainerRef.current) {
             const rect = canvasContainerRef.current.getBoundingClientRect();
             const mouseX = event.clientX - rect.left;
@@ -154,6 +154,7 @@ export default function Particles({
             mousePosition.current = { x: scaledMouseX, y: scaledMouseY };
         }
     };
+
 
     const animate = () => {
         clearContext();
