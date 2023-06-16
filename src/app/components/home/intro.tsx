@@ -31,7 +31,7 @@ export default function Intro() {
                         <span className="text-pink-400 hover:animate-pulse">
                             solutions architecture
                         </span>
-                        . I'm deeply immersed in the development and management of{" "}
+                        . I am deeply immersed in the development and management of{" "}
                         <span className="text-red-400 hover:animate-pulse">
                             AI-powered tools
                         </span>
