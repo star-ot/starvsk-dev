@@ -43,7 +43,8 @@ const companies: Company[] = [
 
 export default function ExperienceTabs() {
     const [activeTab, setActiveTab] = useState(0);
-    const [stockPrices, setStockPrices] = useState<{ [ticker: string]: number }>({});
+    const [stockPrices, setStockPrices] = useState<{ [ticker: string]: number | string }>({});
+
     const controls = useAnimation();
 
     const handleTabClick = (index: number) => {
@@ -87,11 +88,6 @@ export default function ExperienceTabs() {
         fetchStockPrices();
     }, []);
 
-    const handleInView = (inView: boolean) => {
-        if (!inView) {
-            controls.start({ opacity: 0, scale: 0.9 });
-        }
-    };
 
     return (
         <div className="flex flex-col items-center justify-center w-full h-full pb-16">
@@ -155,7 +151,7 @@ export default function ExperienceTabs() {
                                 Ticker: {companies[activeTab].ticker}
                             </p>
                             <p className="mr-2">
-                                Price: ${stockPrices[companies[activeTab].ticker] || "Loading..."}
+                                Price: ${stockPrices[companies[activeTab]?.ticker || ""] || "Loading..."}
                             </p>
                             {/* Optional: Display change value as well */}
                             {/* <p>
