@@ -103,9 +103,10 @@ export default function Home() {
                     during the day.
                 </h2>
                 <TechStack />
-                <ScrollBar />
                 <Intro />
                 <ExperienceTabs />
+                
+                <ScrollBar />
             </div>
         </motion.div>
     );

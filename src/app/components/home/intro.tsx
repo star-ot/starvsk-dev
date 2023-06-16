@@ -12,7 +12,7 @@ export default function Intro() {
     };
 
     return (
-        <div className="flex items-center justify-center w-full h-full mt-0 mb-8">
+        <div className="flex items-center justify-center w-full h-full mt-16 mb-8">
             <p className="text-md font-light text-center text-white md:text-lg w-3/5">
                 <span className="text-4xl mb-12">👨🏻‍💻 About Me</span>
                 <br />
