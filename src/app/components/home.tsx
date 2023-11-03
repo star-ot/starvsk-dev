@@ -85,23 +85,14 @@ export default function Home() {
             <div className="w-screen h-px animate-glow animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
             <div className="mt-8 px-4 text-center animate-fade-in">
                 <h2 className="font-Inter text-sm text-zinc-300 sm:text-base w-2/4 mx-auto px-4 sm:px-0">
-                    Hi, my name is Star, I am building game & web development solutions for Roblox at{" "}
+                    Hi, my name is Star, I am building gameplay solutions on Roblox for {" "}
                     <Link
                         target="_blank"
-                        href="https://northstar.gg"
+                        href="https://cloudentgames.com"
                         className="underline duration-500 hover:text-zinc-300"
                     >
-                        North Star Entertainment Group, Inc.
-                    </Link>{" "}
-                    at night, and working on{" "}
-                    <Link
-                        target="_blank"
-                        href="https://oceanai.io"
-                        className="underline duration-500 hover:text-zinc-300"
-                    >
-                        oceanai.io
-                    </Link>{" "}
-                    during the day.
+                        Cloud Entertainment, Inc.
+                    </Link>
                 </h2>
                 <TechStack />
                 <Intro />
